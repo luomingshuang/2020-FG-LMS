@@ -1,0 +1,874 @@
+@article{Berkenkamp2017,
+	abstract = {Reinforcement learning is a powerful paradigm for learning optimal policies from experimental data. However, to find optimal policies, most reinforcement learning algorithms explore all possible actions, which may be harmful for real-world systems. As a consequence, learning algorithms are rarely applied on safety-critical systems in the real world. In this paper, we present a learning algorithm that explicitly considers safety, defined in terms of stability guarantees. Specifically, we extend control-theoretic results on Lyapunov stability verification and show how to use statistical models of the dynamics to obtain high-performance control policies with provable stability certificates. Moreover, under additional regularity assumptions in terms of a Gaussian process prior, we prove that one can effectively and safely collect data in order to learn about the dynamics and thus both improve control performance and expand the safe region of the state space. In our experiments, we show how the resulting algorithm can safely optimize a neural network policy on a simulated inverted pendulum, without the pendulum ever falling down.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1705.08551v3},
+	author = {Berkenkamp, Felix and Turchetta, Matteo and Schoellig, Angela P. and Krause, Andreas},
+	eprint = {arXiv:1705.08551v3},
+	file = {:home/lms/Documents/2019论文阅读/强化学习/Safe Model-based Reinforcement Learning withStability Guarantees.pdf:pdf},
+	issn = {10495258},
+	journal = {Advances in Neural Information Processing Systems},
+	number = {Nips},
+	pages = {909--919},
+	title = {{Safe model-based reinforcement learning with stability guarantees}},
+	volume = {2017-December},
+	year = {2017}
+}
+
+
+@article{Jin2019,
+	abstract = {— It is critical to obtain stability certificate before deploying reinforcement learning in real-world mission-critical systems. This study justifies the intuition that smoothness (i.e., small changes in inputs lead to small changes in outputs) is an important property for stability-certified reinforcement learning from a control-theoretic perspective. The smoothness margin can be obtained by solving a feasibility problem based on semi-definite programming for both linear and nonlinear dynamical systems, and it does not need to access the exact parameters of the learned controllers. Numerical evaluation on nonlinear and decentralized frequency control for large-scale power grids demonstrates that the smoothness margin can certify stability during both exploration and deployment for (deep) neural-network policies, which substantially surpass nominal controllers in performance. The study opens up new opportunities for robust Lipschitz continuous policy learning.},
+	author = {Jin, Ming and Lavaei, Javad},
+	doi = {10.1109/CDC.2018.8618996},
+	file = {:home/lms/Documents/2019论文阅读/强化学习/Control-Theoretic  Analysis  of  Smoothness  for  Stability-CertifiedReinforcement  Learning.pdf:pdf},
+	isbn = {9781538613955},
+	issn = {07431546},
+	journal = {Proceedings of the IEEE Conference on Decision and Control},
+	pages = {6840--6847},
+	title = {{Control-Theoretic Analysis of Smoothness for Stability-Certified Reinforcement Learning}},
+	volume = {2018-December},
+	year = {2019}
+}
+
+
+@article{Nikishin2018,
+	abstract = {Deep reinforcement learning (RL) methods are notoriously unstable during training. In this paper, we focus on model-free RL algorithms where we observe that the average reward is unstable throughout the learning process and does not increase monotonically given more training steps. Furthermore, a highly rewarded policy, once learned, is often forgotten by an agent, leading to performance deterioration. These problems are partly caused by fundamental presence of noise in gradient estimators in RL. In order to reduce the effect of noise on training, we propose to apply stochastic weight averaging (SWA), a recent method that averages weights along the optimization trajectory. We show that SWA stabilizes the model solutions , alleviates the problem of forgetting the highly rewarded policy during training, and improves the average rewards on several Atari and MuJoCo environments.},
+	author = {Nikishin, Evgenii and Izmailov, Pavel and Athiwaratkun, Ben and Podoprikhin, Dmitrii and Garipov, Timur and Shvechikov, Pavel and Vetrov, Dmitry and Wilson, Andrew Gordon},
+	file = {:home/lms/Documents/2019论文阅读/强化学习/Improving Stability in Deep Reinforcement Learning with Weight Averaging.pdf:pdf},
+	journal = {UAI workshop on Uncertainty in Deep Learning},
+	title = {{Improving Stability in Deep Reinforcement Learning with Weight Averaging}},
+	url = {http://www.gatsby.ucl.ac.uk/{~}balaji/udl-camera-ready/UDL-24.pdf},
+	year = {2018}
+}
+
+@article{Wang2019,
+	abstract = {Lip-reading aims to recognize speech content from videos via visual analysis of speakers' lip movements. This is a challenging task due to the existence of homophemes-words which involve identical or highly similar lip movements, as well as diverse lip appearances and motion patterns among the speakers. To address these challenges, we propose a novel lip-reading model which captures not only the nuance between words but also styles of different speakers, by a multi-grained spatio-temporal modeling of the speaking process. Specifically, we first extract both frame-level fine-grained features and short-term medium-grained features by the visual front-end, which are then combined to obtain discriminative representations for words with similar phonemes. Next, a bidirectional ConvLSTM augmented with temporal attention aggregates spatio-temporal information in the entire input sequence, which is expected to be able to capture the coarse-gained patterns of each word and robust to various conditions in speaker identity, lighting conditions, and so on. By making full use of the information from different levels in a unified framework, the model is not only able to distinguish words with similar pronunciations, but also becomes robust to appearance changes. We evaluate our method on two challenging word-level lip-reading benchmarks and show the effectiveness of the proposed method, which also demonstrate the above claims.},
+	archivePrefix = {arXiv},
+	arxivId = {1908.11618},
+	author = {Wang, Chenhao},
+	eprint = {1908.11618},
+	file = {:home/lms/Downloads/Multi-Grained Spatio-temporal Modeling forLip-reading.pdf:pdf},
+	pages = {1--11},
+	title = {{Multi-Grained Spatio-temporal Modeling for Lip-reading}},
+	url = {http://arxiv.org/abs/1908.11618},
+	year = {2019}
+}
+
+
+@article{Afouras2018,
+	abstract = {The goal of this work is to recognise phrases and sentences being spoken by a talking face, with or without the audio. Unlike previous works that have focussed on recognising a limited number of words or phrases, we tackle lip reading as an open-world problem - unconstrained natural language sentences, and in the wild videos. Our key contributions are: (1) we compare two models for lip reading, one using a CTC loss, and the other using a sequence-to-sequence loss. Both models are built on top of the transformer self-attention architecture; (2) we investigate to what extent lip reading is complementary to audio speech recognition, especially when the audio signal is noisy; (3) we introduce and publicly release a new dataset for audio-visual speech recognition, LRS2-BBC, consisting of thousands of natural sentences from British television. The models that we train surpass the performance of all previous work on a lip reading benchmark dataset by a significant margin.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1809.02108v1},
+	author = {Afouras, Triantafyllos and Chung, Joon Son and Senior, Andrew and Vinyals, Oriol and Zisserman, Andrew},
+	doi = {10.1109/TPAMI.2018.2889052},
+	eprint = {arXiv:1809.02108v1},
+	file = {:home/lms/Documents/2019论文阅读/lip-reading/Deep Audio-Visual Speech Recognition.pdf:pdf},
+	issn = {19393539},
+	journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+	keywords = {Audio Visual Speech Recognition,Deep Learning,Feeds,Hidden Markov models,Lip Reading,Lips,Speech recognition,Training,Videos,Visualization},
+	pages = {1--13},
+	title = {{Deep Audio-visual Speech Recognition}},
+	year = {2018}
+}
+
+
+@article{Stafylakis2018,
+	abstract = {Visual and audiovisual speech recognition are witnessing a renaissance which is largely due to the advent of deep learning methods. },
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1811.01194v1},
+	author = {Stafylakis, Themos and Khan, Muhammad Haris and Tzimiropoulos, Georgios},
+	doi = {10.1016/j.cviu.2018.10.003},
+	eprint = {arXiv:1811.01194v1},
+	file = {:home/lms/Downloads/Pushing the boundaries of audiovisual word recognition using Residual Networks andLSTMs.pdf:pdf},
+	issn = {1090235X},
+	journal = {Computer Vision and Image Understanding},
+	keywords = {Audiovisual speech recognition,Deep learning,Lipreading},
+	pages = {22--32},
+	title = {{Pushing the boundaries of audiovisual word recognition using Residual Networks and LSTMs}},
+	volume = {176-177},
+	year = {2018}
+}
+
+
+@article{Gergen2016,
+	abstract = {Automatic speech recognition (ASR) enables very intuitive human-machine interaction. },
+	author = {Gergen, Sebastian and Zeiler, Steffen and Abdelaziz, Ahmed Hussen and Nickel, Robert and Kolossa, Dorothea},
+	doi = {10.21437/Interspeech.2016-166},
+	file = {:home/lms/Downloads/InSp2016.pdf:pdf},
+	issn = {19909772},
+	journal = {Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH},
+	keywords = {Audiovisual speech recognition,Stream weighting,Turbo decoding},
+	number = {April 2017},
+	pages = {2135--2139},
+	title = {{Dynamic stream weighting for turbo-decoding-based audiovisual ASR}},
+	volume = {08-12-September-2016},
+	year = {2016}
+}
+
+
+@article{Afouras2017,
+	author = {Afouras, Triantafyllos and Chung, Joon Son and Zisserman, Andrew},
+	file = {:home/lms/Downloads/poster2{\_}LipReading{\_}AIMS-update.pdf:pdf},
+	pages = {$https://www.eng.ox.ac.uk/aims-cdt/wp-content/uploads/2017/11/poster2_LipReading_AIMS-update.pdf$},
+	title = {{Deep Learning for Lip Reading}},
+	year = {2017}
+}
+
+
+
+@article{Wand2016,
+	abstract = {Lipreading, i.e. speech recognition from visual-only recordings of a speaker's face, can be achieved with a processing pipeline based solely on neural networks, yielding significantly better accuracy than conventional methods.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1601.08188v1},
+	author = {Wand, Michael and Koutn{\'{i}}k, Jan and Schmidhuber, J{\"{u}}rgen},
+	doi = {10.1109/ICASSP.2016.7472852},
+	eprint = {arXiv:1601.08188v1},
+	file = {:home/lms/Downloads/LIPREADING WITH LONG SHORT-TERM MEMORY.pdf:pdf},
+	isbn = {9781479999880},
+	issn = {15206149},
+	journal = {ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings},
+	keywords = {Image Recognition,Lipreading,Long Short-Term Memory,Recurrent Neural Networks},
+	pages = {6115--6119},
+	title = {{Lipreading with long short-term memory}},
+	volume = {2016-May},
+	year = {2016}
+}
+
+
+@article{Lan2009,
+	abstract = {For automatic lipreading, there are many competing methods for feature extraction.},
+	author = {Lan, Yuxuan and Harvey, Richard W and Theobald, Barry-John and Ong, Eng-Jon and Bowden, Richard},
+	file = {:home/lms/Downloads/Comparing Visual Features for Lipreading.pdf:pdf},
+	journal = {Avsp 2009},
+	pages = {102--106},
+	title = {{Comparing Visual Features for Lipreading}},
+	url = {http://epubs.surrey.ac.uk/531466/},
+	year = {2009}
+}
+
+
+@article{He,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1512.03385v1},
+	author = {He, Kaiming},
+	eprint = {arXiv:1512.03385v1},
+	file = {:home/lms/Downloads/Deep Residual Learning for Image Recognition.pdf:pdf},
+	title = {{Deep Residual Learning for Image Recognition}}
+}
+
+
+@article{Zhang2019,
+	abstract = {Neural Machine Translation (NMT) generates target words sequentially in the way of predicting the next word conditioned on the context words. At training time, it predicts with the ground truth words as context while at inference it has to generate the entire sequence from scratch. This discrepancy of the fed context leads to error accumulation among the way. Furthermore, word-level training requires strict matching between the generated sequence and the ground truth sequence which leads to overcorrection over different but reasonable translations. In this paper, we address these issues by sampling context words not only from the ground truth sequence but also from the predicted sequence by the model during training, where the predicted sequence is selected with a sentence-level optimum. Experiment results on Chinese-{\textgreater}English and WMT'14 English-{\textgreater}German translation tasks demonstrate that our approach can achieve significant improvements on multiple datasets.},
+	archivePrefix = {arXiv},
+	arxivId = {1906.02448},
+	author = {Zhang, Wen and Feng, Yang and Meng, Fandong and You, Di and Liu, Qun},
+	eprint = {1906.02448},
+	file = {:home/lms/Documents/2019论文阅读/Bridging the Gap between Training and Inferencefor Neural Machine Translation.pdf:pdf},
+	title = {{Bridging the Gap between Training and Inference for Neural Machine Translation}},
+	url = {http://arxiv.org/abs/1906.02448},
+	year = {2019}
+}
+
+
+@article{Nallapati2016,
+	abstract = {In this work, we model abstractive text summarization using Attentional Encoder-Decoder Recurrent Neural Networks, and show that they achieve state-of-the-art performance on two different corpora. We propose several novel models that address critical problems in summarization that are not adequately modeled by the basic architecture, such as modeling key-words, capturing the hierarchy of sentence-to-word structure, and emitting words that are rare or unseen at training time. Our work shows that many of our proposed models contribute to further improvement in performance. We also propose a new dataset consisting of multi-sentence summaries, and establish performance benchmarks for further research.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1602.06023v5},
+	author = {Nallapati, Ramesh and Zhou, Bowen and dos Santos, Cicero and Gulcehre, Caglar and Xiang, Bing},
+	doi = {10.18653/v1/k16-1028},
+	eprint = {arXiv:1602.06023v5},
+	file = {:home/lms/Downloads/Abstractive Text Summarization using Sequence-to-sequence RNNs andBeyond.pdf:pdf},
+	pages = {280--290},
+	title = {{Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond}},
+	year = {2016}
+}
+
+
+@article{Prabhavalkar2017,
+	abstract = {In this work, we conduct a detailed evaluation of various all-neural, end-to-end trained, sequence-to-sequence models applied to the task of speech recognition.},
+	author = {Prabhavalkar, Rohit and Rao, Kanishka and Sainath, Tara N. and Li, Bo and Johnson, Leif and Jaitly, Navdeep},
+	doi = {10.21437/Interspeech.2017-233},
+	file = {:home/lms/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Prabhavalkar et al. - 2017 - A Comparison of sequence-to-sequence models for speech recognition.pdf:pdf},
+	issn = {19909772},
+	journal = {Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH},
+	keywords = {Attention models,End-to-end models,RNN transducer,Sequence-to-sequence models},
+	pages = {939--943},
+	title = {{A Comparison of sequence-to-sequence models for speech recognition}},
+	volume = {2017-Augus},
+	year = {2017}
+}
+
+
+@article{Venugopalan,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1505.00487v3},
+	author = {Venugopalan, Subhashini and Rohrbach, Marcus and Darrell, Trevor and Donahue, Jeff and Saenko, Kate and Mooney, Raymond},
+	eprint = {arXiv:1505.00487v3},
+	file = {:home/lms/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Venugopalan et al. - Unknown - Sequence to Sequence – Video to Text.pdf:pdf},
+	title = {{Sequence to Sequence – Video to Text}}
+}
+
+
+@article{Sutskever2014,
+	abstract = {Deep Neural Networks (DNNs) are powerful models that have achieved excellent performance on difficult learning tasks.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1409.3215v3},
+	author = {Sutskever, Ilya and Vinyals, Oriol and Le, Quoc V.},
+	eprint = {arXiv:1409.3215v3},
+	file = {:home/lms/Downloads/Sequence to Sequence Learningwith Neural Networks.pdf:pdf},
+	issn = {10495258},
+	journal = {Advances in Neural Information Processing Systems},
+	number = {January},
+	pages = {3104--3112},
+	title = {{Sequence to sequence learning with neural networks}},
+	volume = {4},
+	year = {2014}
+}
+
+
+@article{Hu2016,
+	abstract = {In view of the advantages of deep networks in produc- ing useful representation, the generated features of different modality data (such as image, audio) can be jointly learned using Multimodal Restricted Boltzmann Machines (MRB- M). },
+	author = {Hu, Di and Li, Xuelong and Lu, Xiaoqiang},
+	doi = {10.1109/CVPR.2016.389},
+	file = {:home/lms/Downloads/Temporal Multimodal Learning in Audiovisual Speech Recognition.pdf:pdf},
+	isbn = {9781467388504},
+	issn = {10636919},
+	journal = {Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+	pages = {3574--3582},
+	title = {{Temporal Multimodal Learning in Audiovisual Speech Recognition}},
+	volume = {2016-December},
+	year = {2016}
+}
+
+
+@article{Fu2018,
+	author = {Fu, Yun and Member, Student and Yan, Shuicheng and Huang, Thomas S and Fellow, Life},
+	file = {:home/lms/Documents/论文/唇语识别(音视觉)/Classification and Feature Extraction bySimplexization.pdf:pdf},
+	title = {{Classification and Feature Extraction by Simplexization}},
+	year = {2018},
+	journal={IEEE Xplore}
+}
+
+@article{Wiseman2016,
+	author = {Wiseman, Sam and Rush, Alexander M},
+	file = {:home/lms/Documents/论文/强化学习/Sequence-to-Sequence Learning
+	as Beam-Search Optimization.pdf:pdf},
+	title = {{Sequence-to-Sequence Learning as Beam-Search Optimization}},
+	year = {2016},
+	journal={EMNLP}
+}
+
+
+@article{Graves2006,
+	author = {Graves, Alex and Fern, Santiago},
+	file = {:home/lms/Downloads/Connectionist Temporal Classification$\backslash$: Labelling UnsegmentedSequence Data with Recurrent Neural Networks.pdf:pdf},
+	title = {{Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks}},
+	year = {2006},
+	journal={ICMl}
+}
+
+
+@article{Eric,
+	author = {Eric Battenberg, Jitong Chen, Rewon Child, Adam Coates, Yashesh Gaur, Yi Li,Hairong Liu, Sanjeev Satheesh, David Seetapun, Anuroop Sriram, Zhenyao Zhu},
+	file = {:home/lms/Documents/论文/Attention/A Decomposable Attention Model for Natural Language Inference.pdf:pdf},
+	title = {{EXPLORING NEURAL TRANSDUCERS FOR END-TO-END SPEECH RECOGNITION}}}
+
+@article{Rohit,
+	author = {Rohit Prabhavalkar, Kanishka Rao, Tara N. Sainath, Bo Li, LeifJohnson, Navdeep Jaitly},
+	file = {:home/lms/Documents/论文/Attention/A Decomposable Attention Model for Natural Language Inference.pdf:pdf},
+	title = {{A Comparison of Sequence-to-Sequence Models for Speech Recognition}},
+	year = {2017},
+	journal={Interspeech}	
+}
+
+@article{IIya,
+	author = {Parikh, Ankur P and Uszkoreit, Jakob},
+	file = {:home/lms/Documents/论文/Attention/A Decomposable Attention Model for Natural Language Inference.pdf:pdf},
+	title = {{Sequence to Sequence Learning with Neural Networks}},
+	year = {2014},
+	journal ={NIPS}	
+}
+
+@article{Parikh2016,
+	author = {Parikh, Ankur P and Uszkoreit, Jakob},
+	file = {:home/lms/Documents/论文/Attention/A Decomposable Attention Model for Natural Language Inference.pdf:pdf},
+	title = {{A Decomposable Attention Model for Natural Language Inference}},
+	year = {2016},
+	journal={ACL}
+}
+
+@article{Chen2017,
+	abstract = {Impressive image captioning results are achieved in domains with plenty of training image and sentence pairs (e.g., MSCOCO). However, transferring to a target domain with significant domain shifts but no paired training data (referred to as cross-domain image captioning) remains largely unexplored. We propose a novel adversarial training procedure to leverage unpaired data in the target domain. Two critic networks are introduced to guide the captioner, namely domain critic and multi-modal critic. The domain critic assesses whether the generated sentences are indistinguishable from sentences in the target domain. The multi-modal critic assesses whether an image and its generated sentence are a valid pair. During training, the critics and captioner act as adversaries -- captioner aims to generate indistinguishable sentences, whereas critics aim at distinguishing them. The assessment improves the captioner through policy gradient updates. During inference, we further propose a novel critic-based planning method to select high-quality sentences without additional supervision (e.g., tags). To evaluate, we use MSCOCO as the source domain and four other datasets (CUB-200-2011, Oxford-102, TGIF, and Flickr30k) as the target domains. Our method consistently performs well on all datasets. In particular, on CUB-200-2011, we achieve 21.8{\%} CIDEr-D improvement after adaptation. Utilizing critics during inference further gives another 4.5{\%} boost.},
+	author = {Chen, Tseng Hung and Liao, Yuan Hong and Chuang, Ching Yao and Hsu, Wan Ting and Fu, Jianlong and Sun, Min},
+
+	file = {:home/lms/Documents/论文/NLP/Chen{\_}Show{\_}Adapt{\_}and{\_}ICCV{\_}2017{\_}paper.pdf:pdf},
+
+	journal = {ICCV},
+
+	title = {{Show, Adapt and Tell: Adversarial Training of Cross-Domain Image Captioner}},
+
+	year = {2017}
+}
+
+
+@article{HIWTC2014,
+	author = {Jianlong Fu, Heliang Zheng, Tao Mei}, 
+	file = {:home/lms/Documents/论文/Attention/Fu{\_}Look{\_}Closer{\_}to{\_}CVPR{\_}2017{\_}paper.pdf:pdf},
+	title = {{Look Closer to See Better: Recurrent Attention Convolutional Neural Network for Fine-grained Image Recognition}},
+	year = {2014},
+	journal={CVPR}
+}
+
+
+@article{Ren2017,
+	abstract = {Image captioning is a challenging problem owing to the complexity in understanding the image content and di- verse ways of describing it in natural language. Recent advances in deep neural networks have substantially im- proved the performance of this task. Most state-of-the-art approaches follow an encoder-decoder framework, which generates captions using a sequential recurrent predic- tion model. However, in this paper, we introduce a novel decision-making framework for image captioning. We uti- lize a “policy network” and a “value network” to collab- oratively generate captions. The policy network serves as a local guidance by providing the confidence of predicting the next word according to the current state. Additionally, the value network serves as a global and lookahead guid- ance by evaluating all possible extensions of the current state. In essence, it adjusts the goal of predicting the cor- rect words towards the goal ofgenerating captions similar to the ground truth captions. We train both networks using an actor-critic reinforcement learning model, with a novel reward defined by visual-semantic embedding. Extensive experiments and analyses on the Microsoft COCO dataset show that the proposed framework outperforms state-of- the-art approaches across different evaluation metrics.},
+	archivePrefix = {arXiv},
+	arxivId = {1704.03899},
+	author = {Ren, Zhou and Wang, Xiaoyu and Zhang, Ning},
+	eprint = {1704.03899},
+	file = {:home/lms/Documents/论文/强化学习/2018-12-30Deep Reinforcement Learning-based Image Captioning with Embedding Reward.pdf:pdf},
+	journal = {CVPR},
+	title = {{Deep Reinforcement Learning-based Image Captioning with Embedding Reward}},
+	year = {2017}
+}
+
+
+@article{Shen,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1811.04224v1},
+	author = {Shen, Yih-liang and Huang, Chao-yuan and Wang, Syu-siang and Tsao, Yu and Wang, Hsin-min and Chi, Tai-shih and Engineering, Computer and Chiao, National},
+	eprint = {arXiv:1811.04224v1},
+	file = {:home/lms/Documents/论文/强化学习/2018-11-30-杨老师推荐REINFORCEMENT LEARNING BASED SPEECH ENHANCEMENT FOR ROBUS
+	T SPEECH
+	RECOGNITION.pdf:pdf},
+	title = {{Reinforcement learning based speech enhancement for robust speech recognition}},
+	year={2019},
+	journal={ICASSP}
+}
+
+@article{Wang,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1711.11135v3},
+	author = {Wang, Xin and Chen, Wenhu and Wu, Jiawei and Wang, Yuan-fang},
+	eprint = {arXiv:1711.11135v3},
+	file = {:home/lms/Documents/论文/强化学习/2018-12-21Video Captioning via Hierarchical Reinforcement Learning.pdf:pdf},
+	title = {{Video Captioning via Hierarchical Reinforcement Learning}},
+	year={2018},
+	journal={CVPR}
+}
+
+
+@article{Chen,
+	author = {Chen, Zhifeng and Schuster, Mike and Schuurmans, Dale},
+	file = {:home/lms/Documents/论文/研一下学期第一周/6547-reward-augmented-maximum-likelihood-for-neural-structured-prediction.pdf:pdf},
+	title = {{Reward Augmented Maximum Likelihood for Neural Structured Prediction}},
+	year={2016},
+	journal={NIPS}
+}
+
+
+@article{Wiseman2016,
+	author = {Wiseman, Sam and Rush, Alexander M},
+	file = {:home/lms/Documents/论文/强化学习/Sequence-to-Sequence Learning
+	as Beam-Search Optimization.pdf:pdf},
+	title = {{Sequence-to-Sequence Learning as Beam-Search Optimization}},
+	year = {2016},
+	journal={EMNLP}
+}
+
+@article{Bakry2013,
+	abstract = {Visual speech recognition is a challenging problem, due to confusion $\backslash$nbetween visual speech features. The speaker identification problem is usually $\backslash$ncoupled with speech recognition. Moreover, speaker identification is important $\backslash$nto several applications, such as automatic access control, biometrics, $\backslash$nauthentication, and personal privacy issues. In this paper, we propose a novel $\backslash$napproach for lip reading and speaker identification. We propose a new approach $\backslash$nfor manifold parameterization in a low-dimensional latent space, where each $\backslash$nmanifold is represented as a point in that space. We initially parameterize each $\backslash$ninstance manifold using a nonlinear mapping from a unified manifold $\backslash$nrepresentation. We then factorize the parameter space using Kernel Partial Least $\backslash$nSquares (KPLS) to achieve a low-dimension manifold latent space. We use two-way $\backslash$nprojections to achieve two manifold latent spaces, one for the speech content $\backslash$nand one for the speaker. We apply our approach on two public databases: $\backslash$nAVLetters and OuluVS. We show the results for three different settings of lip $\backslash$nreading: speaker independent, speaker dependent, and speaker semi-dependent. Our $\backslash$napproach outperforms for the speaker semi-dependent setting by at least 15{\%} of $\backslash$nthe baseline, and competes in the other two settings.},
+	author = {Bakry, Amr and Elgammal, Ahmed},
+	file = {:home/lms/Documents/论文/唇语识别(音视觉)/MKPLS$\backslash$: Manifold Kernel Partial Least Squaresfor Lipreading and Speaker Identification.pdf:pdf},
+	keywords = {AVLetters,KPLS,LBP,Lipreading,Low-dimensional embedding,MKPLS,Manifold Parameterization,OuluVs,PLS,Speaker identification,Visual speech recognition},
+	publisher = {IEEE},
+	title = {{MKPLS: Manifold kernel partial least squares for lipreading and speaker identification}},
+	year = {2013},
+	journal={CVPR}
+}
+
+@article{Stafylakis2017,
+	abstract = {We propose an end-to-end deep learning architecture for word-level visual speech recognition. The system is a combination of spatiotemporal convolutional, residual and bidirectional Long Short-Term Memory networks. We train and evaluate it on the Lipreading In-The-Wild benchmark, a challenging database of 500-size target-words consisting of 1.28sec video excerpts from BBC TV broadcasts. The proposed network attains word accuracy equal to 83.0, yielding 6.8 absolute improvement over the current state-of-the-art, without using information about word boundaries during training or testing.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1703.04105v4},
+	author = {Stafylakis, Themos and Tzimiropoulos, Georgios},
+	eprint = {arXiv:1703.04105v4},
+	file = {:home/lms/Documents/论文/唇语识别(音视觉)/Combining Residual Networks with LSTMs for Lipreading.pdf:pdf},
+	keywords = {Deep learning,Lipreading,Visual speech recognition},
+	title = {{Combining residual networks with LSTMs for lipreading}},
+	year = {2017},
+	journal={Interspeech}
+}
+
+
+@article{Zhao2009,
+	abstract = {Visual speech information plays an important role in lipreading under noisy conditions or for listeners with a hearing impairment. In this paper, we present local spatiotemporal descriptors to represent and recognize spoken isolated phrases based solely on visual input. Spatiotemporal local binary patterns extracted from mouth regions are used for describing isolated phrase sequences. In our experiments with 817 sequences from ten phrases and 20 speakers, promising accuracies of 62{\%} and 70{\%} were obtained in speaker-independent and speaker-dependent recognition, respectively. In comparison with other methods on AVLetters database, the accuracy, 62.8{\%}, of our method clearly outperforms the others. Analysis of the confusion matrix for 26 English letters shows the good clustering characteristics of visemes for the proposed descriptors. The advantages of our approach include local processing and robustness to monotonic gray-scale changes. Moreover, no error prone segmentation of moving lips is needed.},
+	author = {Zhao, Guoying and Barnard, Mark and Pietik{\"{a}}inen, Matti},
+
+	file = {:home/lms/Documents/论文/唇语识别(音视觉)/Lipreading With Local Spatiotemporal Descriptors.pdf:pdf},
+	journal = {IEEE Transactions on Multimedia},
+	keywords = {Lipreading,Local binary patterns,Spatiotemporal descriptors,Visual speech recognition},
+	title = {{Lipreading with local spatiotemporal descriptors}},
+	year = {2009}
+}
+
+@article{Pitsikalis2006,
+	abstract = {While the accuracy of feature measurements heavily depends on changing environmental conditions, studying the consequences of this fact in pattern recognition tasks has received relatively little attention to date. In this work we explicitly take into account feature measurement uncertainty and we show how classification rules should be adjusted to compensate for its effects. Our approach is particularly fruitful in multimodal fusion scenarios, such as audio-visual speech recognition, where multiple streams of complementary time-evolving features are integrated. For such applications, provided that the measurement noise uncertainty for each feature stream can be estimated, the proposed framework leads to highly adaptive multimodal fusion rules which are widely applicable and easy to implement. We further show that previous multimodal fusion methods relying on stream weights fall under our scheme under certain assumptions; this provides novel insights into their applicability for various tasks and suggests new practical ways for estimating the stream weights adaptively. The potential of our approach is demonstrated in audio-visual speech recognition using either synchronous or asynchronous models.},
+	author = {Pitsikalis, V. and Katsamanis, A. and Papandreou, G. and Maragos, P.},
+	file = {:home/lms/Documents/论文/唇语识别(音视觉)/Adaptive Multimodal Fusion by UncertaintyCompensation With Application to AudiovisualSpeech Recognition.pdf:pdf},
+	journal = {International Conference on Spoken Language Processing},
+	title = {{Adaptive multimodal fusion by uncertainty compensation}},
+	year = {2006}
+}
+
+
+@article{Graphics,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1901.01034v1},
+author = {Graphics, Volume and Zheng, Lei},
+eprint = {arXiv:1901.01034v1},
+file = {:home/lms/Downloads/BMVC论文/1901.01034.pdf:pdf},
+title = {{Instance Segmentation of Fibers from Low Resolution CT Scans via 3D Deep Embedding Learning}},
+year={2018},
+journal={BMVC}
+}
+
+@article{Stafylakis,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1807.08469v2},
+author = {Stafylakis, Themos and Tzimiropoulos, Georgios},
+eprint = {arXiv:1807.08469v2},
+file = {:home/lms/Documents/论文/visual-speech/Zero-shot keyword spotting for visual speechrecognition in-the-wild.pdf:pdf},
+keywords = {visual keyword spotting,visual speech recognition,zero-},
+title = {{Zero-shot keyword spotting for visual speech recognition in-the-wild}},
+year={2018},
+journal={ECCV}
+}
+
+@article{Rennie,
+author = {Rennie, Steven J and Marcheret, Etienne and Mroueh, Youssef and Ross, Jerret and Goel, Vaibhava},
+file = {:home/lms/Documents/论文/强化学习/Rennie{\_}Self-Critical{\_}Sequence{\_}Training{\_}CVPR{\_}2017{\_}paper.pdf:pdf},
+title = {{Self-critical Sequence Training for Image Captioning}},
+year={2017},
+journal={CVPR}
+}
+
+@article{Tjandra2017,
+abstract = {Despite the success of sequence-to-sequence approaches in automatic speech recognition (ASR) systems, the models still suffer from several problems, mainly due to the mismatch between the training and inference conditions. In the sequence-to-sequence architecture, the model is trained to predict the grapheme of the current time-step given the input of speech signal and the ground-truth grapheme history of the previous time-steps. However, it remains unclear how well the model approximates real-world speech during inference. Thus, generating the whole transcription from scratch based on previous predictions is complicated and errors can propagate over time. Furthermore, the model is optimized to maximize the likelihood of training data instead of error rate evaluation metrics that actually quantify recognition quality. This paper presents an alternative strategy for training sequence-to-sequence ASR models by adopting the idea of reinforcement learning (RL). Unlike the standard training scheme with maximum likelihood estimation, our proposed approach utilizes the policy gradient algorithm. We can (1) sample the whole transcription based on the model's prediction in the training process and (2) directly optimize the model with negative Levenshtein distance as the reward. Experimental results demonstrate that we significantly improved the performance compared to a model trained only with maximum likelihood estimation.},
+archivePrefix = {arXiv},
+arxivId = {1710.10774},
+author = {Tjandra, Andros and Sakti, Sakriani and Nakamura, Satoshi},
+file = {:home/lms/Documents/论文/强化学习/2018-12-30SEQUENCE-TO-SEQUENCE ASR OPTIMIZATION VIA REINFORCEMENT LEARNING.pdf:pdf},
+title = {{Sequence-to-Sequence ASR Optimization via Reinforcement Learning}},
+year = {2018},
+journal={ICASSP}
+}
+
+@article{B2017,
+author = {B, Joon Son Chung and Zisserman, Andrew},
+file = {:home/lms/Downloads/Chung-Zisserman2017{\_}Chapter{\_}LipReadingInTheWild.pdf:pdf},
+title = {{Lip Reading in the Wild}},
+year = {2017},
+journal={ACCV}
+}
+
+@article{Chung,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1611.05358v2},
+author = {Chung, Joon Son},
+eprint = {arXiv:1611.05358v2},
+file = {:home/lms/Downloads/Lip Reading Sentences in the Wild.pdf:pdf},
+title = {{Lip Reading Sentences in the Wild}},
+year={2017},
+journal={ICCV}
+}
+
+@article{Assael2016,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1611.01599v2},
+author = {Assael, Yannis M and Shillingford, Brendan and Whiteson, Shimon and Freitas, Nando De},
+eprint = {arXiv:1611.01599v2},
+file = {:home/lms/Desktop/组会文件/组会PPT--研一下/dense{\_}reward for lipreading via character decoding{\_}第一篇论文写作/references/LIPNET$\backslash$: END-TO-ENDSENTENCE-LEVELLIPREADING.pdf:pdf},
+title = {{LipNet: end-to-end sentence-level lipreading}},
+year = {2016}
+}
+
+@article{Ji2010,
+author = {Ji, Shuiwang and Yu, Kai},
+file = {:home/lms/Downloads/3D Convolutional Neural Networks for Human Action Recognition.pdf:pdf},
+title = {{3D Convolutional Neural Networks for Human Action Recognition}},
+year = {2012},
+journal={TPAMI}
+}
+
+@article{Tran,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1412.0767v4},
+author = {Tran, Du and Bourdev, Lubomir and Fergus, Rob and Torresani, Lorenzo and Paluri, Manohar},
+eprint = {arXiv:1412.0767v4},
+file = {:home/lms/Downloads/Learning Spatiotemporal Features with 3D Convolutional Networks.pdf:pdf},
+title = {{Learning Spatiotemporal Features with 3D Convolutional Networks}},
+year={2015},
+journal={ICCV}
+}
+
+@article{Venugopalan,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1505.00487v3},
+author = {Venugopalan, Subhashini and Rohrbach, Marcus and Darrell, Trevor and Donahue, Jeff and Saenko, Kate and Mooney, Raymond},
+eprint = {arXiv:1505.00487v3},
+file = {:home/lms/Documents/论文/sequence to sequence-video to text.pdf:pdf},
+title = {{Sequence to Sequence-Video to Text}},
+year={2015},
+journal={ICCV}
+}
+
+@article{Hochreiter2016,
+author = {Hochreiter, Sepp},
+file = {:home/lms/Downloads/lstm.pdf:pdf},
+number = {April},
+title = {{Long Short-term Memory}},
+year = {1997},
+journal={ACM DL}
+}
+
+@article{Xu2014,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1502.03044v3},
+	author = {Xu, Kelvin and Courville, Aaron and Zemel, Richard S and Bengio, Yoshua},
+	eprint = {arXiv:1502.03044v3},
+	file = {:home/lms/Documents/论文/研一下学期第六周/Show, Attend and Tell$\backslash$: Neural Image CaptionGeneration with Visual Attention.pdf:pdf},
+	title = {{Show , Attend and Tell: Neural Image Caption Generation with Visual Attention}},
+	year = {2015},
+	journal={ICML}
+}
+
+@article{Vaswani2017,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1706.03762v5},
+	author = {Vaswani, Ashish},
+	eprint = {arXiv:1706.03762v5},
+	file = {:home/lms/Downloads/Attention Is All You Need.pdf:pdf},
+	journal = {NIPS},
+	title = {{Attention Is All You Need}},
+	year = {2017}
+}
+
+@article{Chopra2016,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1511.06732v7},
+	author = {Chopra, Sumit and Auli, Michael and Zaremba, Wojciech},
+	eprint = {arXiv:1511.06732v7},
+	file = {:home/lms/Documents/论文/强化学习/SEQUENCELEVELTRAINING WITHRECURRENTNEURALNETWORKS.pdf:pdf},
+	journal={ICLR},
+	title = {{SEQUENCE LEVEL TRAINING WITH RECURRENT NEURAL NETWORKS}},
+	year = {2016}
+}
+
+@article{Bengio,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1506.03099v3},
+	author = {Bengio, Samy and Vinyals, Oriol and Jaitly, Navdeep and Shazeer, Noam and View, Mountain},
+	eprint = {arXiv:1506.03099v3},
+	file = {:home/lms/Documents/论文/Scheduled Sampling for Sequence Prediction withRecurrent Neural Networks.pdf:pdf},
+	title = {{Recurrent Neural Networks}}
+}
+
+@article{Papineni2002,
+	author = {Papineni, Kishore and Roukos, Salim and Ward, Todd and Zhu, Wei-jing},
+	file = {:home/lms/Documents/论文/BLEU$\backslash$: a MethodforAutomaticEvaluationofMachineTranslation.pdf:pdf},
+	number = {July},
+	title = {{BLEU: a Method for Automatic Evaluation of Machine Translation}},
+	year = {2002},
+	journal={ACL}
+}
+
+@article{Banerjee2003,
+	author = {Banerjee, Satanjeev and Lavie, Alon},
+	file = {:home/lms/Documents/论文/METEOR$\backslash$: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments .pdf:pdf},
+	title = {{METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments}},
+	year = {2005},
+	journal={ACL}
+}
+
+@article{Lin2001,
+	author = {Lin, Chin-yew and Rey, Marina},
+	file = {:home/lms/Documents/论文/ROUGE$\backslash$: A Package for Automatic Evaluation of Summaries.pdf:pdf},
+	title = {{ROUGE: A Package for Automatic Evaluation of Summaries}},
+	year = {2004},
+	journal={ACL}
+}
+
+@article{Tech,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1411.5726v2},
+	author = {Tech, Virginia and Zitnick, C Lawrence and Parikh, Devi},
+	eprint = {arXiv:1411.5726v2},
+	file = {:home/lms/Documents/论文/CIDEr$\backslash$: Consensus-based Image Description Evaluation.pdf:pdf},
+	title = {{CIDEr: Consensus-based Image Description Evaluation}},
+	year={2015},
+	journal={CVPR}
+}
+
+@article{Pasunuru2017,
+	abstract = {Sequence-to-sequence models have shown promising improvements on the temporal task of video captioning, but they optimize word-level cross-entropy loss during training. First, using policy gradient and mixed-loss methods for reinforcement learning, we directly optimize sentence-level task-based metrics (as rewards), achieving significant improvements over the baseline, based on both automatic metrics and human evaluation on multiple datasets. Next, we propose a novel entailment-enhanced reward (CIDEnt) that corrects phrase-matching based metrics (such as CIDEr) to only allow for logically-implied partial matches and avoid contradictions, achieving further significant improvements over the CIDEr-reward model. Overall, our CIDEnt-reward model achieves the new state-of-the-art on the MSR-VTT dataset.},
+	archivePrefix = {arXiv},
+	arxivId = {1708.02300},
+	author = {Pasunuru, Ramakanth and Bansal, Mohit},
+	file = {:home/lms/Documents/论文/强化学习/Reinforced Video Captioning with Entailment Rewards.pdf:pdf},
+	title = {{Reinforced Video Captioning with Entailment Rewards}},
+	year = {2017},
+	journal={EMNLP}
+}
+
+
+@article{McConnell2002,
+	abstract = {Background: Little is known about the effect of exposure to air pollution during exercise or time spent outdoors on the development of asthma. We investigated the relation between newly-diagnosed asthma and team sports in a cohort of children exposed to different concentrations and mixtures of air pollutants. Methods: 3535 children with no history of asthma were recruited from schools in 12 communities in southern California and were followed up for up to 5 years. 265 children reported a new diagnosis of asthma during follow-up. We assessed risk of asthma in children playing team sports at study entry in six communities with high daytime ozone concentrations, six with lower concentrations, and in communities with high or low concentrations of nitrogen dioxide, particulate matter, and inorganic-acid vapour. Findings: In communities with high ozone concentrations, the relative risk of developing asthma in children playing three or more sports was 3.3 (95{\%} CI 1.9-5.8), compared with children playing no sports. Sports had no effect in areas of low ozone concentration (0.8, 0.4-1.6). Time spent outside was associated with a higher incidence of asthma in areas of high ozone (1.4, 1.0-2.1), but not in areas of low ozone. Exposure to pollutants other than ozone did not alter the effect of team sports. Interpretation: Incidence of new diagnoses of asthma is associated with heavy exercise in communities with high concentrations of ozone, thus, air pollution and outdoor exercise could contribute to the development of asthma in children.},
+	archivePrefix = {arXiv},
+	arxivId = {1510.09202v1},
+	author = {McConnell, Rob and Berhane, Kiros and Gilliland, Frank and London, Stephanie J. and Islam, Talat and Gauderman, W. James and Avol, Edward and Margolis, Helene G. and Peters, John M.},
+	eprint = {1510.09202v1},
+	file = {:home/lms/Documents/论文/强化学习/2018-11-14Generating Text with Deep Reinforcement Learning.pdf:pdf},
+
+	title = {{Asthma in exercising children exposed to ozone: A cohort study}},
+	year = {2002}
+}
+
+@article{Willia1992,
+	abstract = {This article presents a general class of associative reinforcement learning algorithms for connectionist networks containing stochastic units. These algorithms, called REINFORCE algorithms, are shown to make weight adjustments in a direction that lies along the gradient of expected reinforcement in both immediate-reinforcement tasks and certain limited forms of delayed-reinforcement tasks, and they do this without explicitly computing gradient estimates or even storing information from which such estimates could be computed. Specific examples of such algorithms are presented, some of which bear a close relationship to certain existing algorithms while others are novel but potentially interesting in their own right. Also given are results that show how such algorithms can be naturally integrated with backpropagation. We close with a brief discussion of a number of additional issues surrounding the use of such algorithms, including what is known about their limiting behaviors as well as further considerations that might be used to help develop similar but potentially more powerful reinforcement learning algorithms.},
+	author = {Willia, Ronald J.},
+	file = {:home/lms/Documents/论文/强化学习/Williams1992{\_}Article{\_}SimpleStatisticalGradient-foll.pdf:pdf},
+	journal = {Machine Learning},
+	keywords = {Reinforcement learning,connectionist networks,gradient descent,mathematical analysis},
+	title = {{Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning}},
+	volume = {8},
+	year = {1992},
+	journal={Springer}
+}
+
+@article{Willia1992,
+	abstract = {This article presents a general class of associative reinforcement learning algorithms for connectionist networks containing stochastic units. These algorithms, called REINFORCE algorithms, are shown to make weight adjustments in a direction that lies along the gradient of expected reinforcement in both immediate-reinforcement tasks and certain limited forms of delayed-reinforcement tasks, and they do this without explicitly computing gradient estimates or even storing information from which such estimates could be computed. Specific examples of such algorithms are presented, some of which bear a close relationship to certain existing algorithms while others are novel but potentially interesting in their own right. Also given are results that show how such algorithms can be naturally integrated with backpropagation. We close with a brief discussion of a number of additional issues surrounding the use of such algorithms, including what is known about their limiting behaviors as well as further considerations that might be used to help develop similar but potentially more powerful reinforcement learning algorithms.},
+	author = {Willia, Ronald J.},
+	file = {:home/lms/Documents/论文/强化学习/Williams1992{\_}Article{\_}SimpleStatisticalGradient-foll.pdf:pdf},
+
+	journal = {Machine Learning},
+	keywords = {Reinforcement learning,connectionist networks,gradient descent,mathematical analysis},
+	title = {{Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning}},
+	year = {1992},
+	journal={Springer}
+}
+
+@article{Vision2018,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1811.01194v1},
+	author = {Vision, Computer and Understanding, Image},
+	eprint = {arXiv:1811.01194v1},
+	file = {:home/lms/Documents/论文/Pushing the boundaries of audiovisual word recognition using Residual Networks and
+	LSTMs.pdf:pdf},
+	title = {{Pushing the boundaries of audiovisual word recognition using Residual Networks and LSTMs}},
+	year = {2018},
+	journal={Computer Vision and Image Understanding}
+}
+
+@article{Sutton1999,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1811.01194v1},
+	author = {Richard S. Sutton, David McAllester, Satinder Singh, Yishay Mansour},
+	eprint = {arXiv:1811.01194v1},
+	file = {:home/lms/Documents/论文/Pushing the boundaries of audiovisual word recognition using Residual Networks and
+	LSTMs.pdf:pdf},
+	title = {{Policy Gradient Methods for Reinforcement Learning with Function Approximation}},
+	year = {1999},
+	journal={NIPS}
+}
+
+@book{Bach,
+	author = {Richard S. Sutton and Andrew G. Barto},
+	file = {:home/lms/Documents/强化学习资料/RLbook2018.pdf:pdf},
+	isbn = {9780262193986},
+	title = {{Reinforcement Learning An introduction--second edition}}
+}
+
+@article{Li2018,
+	abstract = {Although end-to-end (E2E) learning has led to promising performance on a variety of tasks, it is often impeded by hardware constraints (e.g., GPU memories) and is prone to overfitting. When it comes to video captioning, one of the most challenging benchmark tasks in computer vision and machine learning, those limitations of E2E learning are especially amplified by the fact that both the input videos and output captions are lengthy sequences. Indeed, state-of-the-art methods of video captioning process video frames by convolutional neural networks and generate captions by unrolling recurrent neural networks. If we connect them in an E2E manner, the resulting model is both memory-consuming and data-hungry, making it extremely hard to train. In this paper, we propose a multitask reinforcement learning approach to training an E2E video captioning model. The main idea is to mine and construct as many effective tasks (e.g., attributes, rewards, and the captions) as possible from the human captioned videos such that they can jointly regulate the search space of the E2E neural network, from which an E2E video captioning model can be found and generalized to the testing phase. To the best of our knowledge, this is the first video captioning model that is trained end-to-end from the raw video input to the caption output. Experimental results show that such a model outperforms existing ones to a large margin on two benchmark video captioning datasets.},
+	archivePrefix = {arXiv},
+	arxivId = {1803.07950},
+	author = {Li, Lijun and Gong, Boqing},
+	file = {:home/lms/Documents/论文/强化学习/End-to-End Video Captioning with Multitask Reinforcement Learning.pdf:pdf},
+	title = {{End-to-End Video Captioning with Multitask Reinforcement Learning}},
+	year = {2018},
+	journal={WACV}
+}
+
+@article{Fleischmann1979,
+	abstract = {Connectionist temporal classification (CTC) is widely used for maximum likelihood learning in end-to-end speech recog-nition models. However, there is usually a disparity between the negative maximum likelihood and the performance met-ric used in speech recognition, e.g., word error rate (WER). This results in a mismatch between the objective function and metric during training. We show that the above problem can be mitigated by jointly training with maximum likelihood and policy gradient. In particular, with policy learning we are able to directly optimize on the (otherwise non-differentiable) per-formance metric. We show that joint training improves rela-tive performance by 4{\%} to 13{\%} for our end-to-end model as compared to the same model learned through maximum like-lihood. The model achieves 5.53{\%} WER on Wall Street Jour-nal dataset, and 5.42{\%} and 14.70{\%} on Librispeech test-clean and test-other set, respectively.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1712.07101v1},
+	author = {Fleischmann, D. W. and Marschall, H. U. and {De Bakker}, J. M.T.},
+	file = {:home/lms/Documents/论文/强化学习/2018-11-30Improving end-to-end speech recognition with policy learning.pdf:pdf},
+	title = {{Rate and rhythm dependent vulnerability of the human ventricular myocardium}},
+	year = {1979},
+	journal={Springer}
+}
+
+@article{Fellowship2009,
+	author = {Fellowship, Lucille Packard},
+	file = {:home/lms/Downloads/APPROXIMATING EDIT DISTANCE IN NEAR-LINEAR TIME∗.pdf:pdf},
+	keywords = {1,68q25,68r15,68w20,68w25,68w40,ams subject classifications,and substitutions needed to,approximation algorithms,between two strings,deletions,edit distance,insertions,introduction,is the number of,metric embeddings,or levenshtein distance,the edit distance,transform one string},
+	title = {{Approximating edit distance in near-linear time}},
+	year = {2009},
+	journal={ACM DL}
+}
+
+@article{Chung2018,
+	author = {Chung, Joon Son and Zisserman, Andrew},
+	file = {:home/lms/Downloads/Learning to lip read words by watching videos.pdf:pdf},
+	journal = {Computer Vision and Image Understanding},
+	keywords = {Active speaker detection,Dataset,Large vocabulary,Lip reading,Lip synchronisation},
+	number = {February},
+	publisher = {Elsevier},
+	title = {{Learning to lip read words by watching videos}},
+	year = {2018},
+	journal={Computer Vision and Image Understanding}
+}
+
+@inproceedings{Afouras,
+	author = {Afouras, Triantafyllos and {Son Chung}, Joon and Zisserman, Andrew},
+	booktitle = {Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH},
+	doi = {10.21437/Interspeech.2018-1943},
+	issn = {19909772},
+	keywords = {Lip reading,Visual speech recognition},
+	title = {{Deep lip reading: A comparison of models and an online application}},
+	year = {2018}
+}
+
+@article{Zhou2014,
+	author = {Zhou, Ziheng and Zhao, Guoying and Hong, Xiaopeng and Pietik{\"{a}}inen, Matti},
+
+	file = {:home/lms/Downloads/A review of recent advances in visual speech decoding.pdf:pdf},
+	keywords = {Audio-visual speech recognition,Automatic speech recognition,Lip-reading,Review,Visual speech decoding,automatic speech recognition,visual speech decoding},
+	number = {9},
+	publisher = {Elsevier B.V.},
+	title = {{ A review of recent advances in visual speech decoding}},
+	year = {2014},
+	journal = {IMAVIS}
+}
+
+@article{Petridis2018,
+	author = {Petridis, Stavros and Stafylakis, Themos and Ma, Pingchuan and Cai, Feipeng},
+	file = {:home/lms/Documents/论文/唇语识别(音视觉)/2018-11-00END-TO-END AUDIOVISUAL SPEECH RECOGNITION.pdf:pdf},
+	title = {{END-TO-END AUDIOVISUAL SPEECH RECOGNITION}},
+	year = {2018},
+	journal={ICASSP}
+}
+
+@article{Yang2019,
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1810.06990v5},
+	author = {Yang, Shuang and Zhang, Yuanhang and Feng, Dalu and Yang, Mingmin and Wang, Chenhao and Xiao, Jingyun and Long, Keyu and Shan, Shiguang and Chen, Xilin},
+	eprint = {arXiv:1810.06990v5},
+	file = {:home/lms/Downloads/LRW-1000$\backslash$:  A  Naturally-Distributed  Large-Scale  Benchmarkfor  Lip  Reading  in  the  Wild.pdf:pdf},
+	title = {{A Naturally-Distributed Large-Scale Benchmarkfor Lip  Reading in the Wild}},
+	year = {2018},
+	journal={IEEE FG}
+}
+
+@article{Graves2006,
+	author = {Graves, Alex and Fern, Santiago},
+	file = {:home/lms/Downloads/Connectionist Temporal Classification$\backslash$: Labelling UnsegmentedSequence Data with Recurrent Neural Networks.pdf:pdf},
+	title = {{Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks}},
+	year = {2006},
+	journal={ICML}
+}
+
+@article{Chung2017,
+	author = {Chung, Joon Son and Zisserman, Andrew},
+	file = {:home/lms/Downloads/Lip Reading in Profile.pdf:pdf},
+	title = {{Lip Reading in Profile}},
+	year = {2017},
+	journal={BMVC}
+}
+
+@article{Chen2014,
+	abstract = {A t-round key-alternating cipher (also called iterated Even-Mansour cipher) can be viewed as an abstraction of AES. It defines a cipher E from t fixed public permutations P1, . . . , Pt : {\{}0, 1{\}} n → {\{}0, 1{\}} n and a key k = k0 {\textperiodcentered} {\textperiodcentered} {\textperiodcentered} {\textperiodcentered}kt ∈ {\{}0, 1{\}} n(t+1) by setting E k (x) = kt ⊕Pt(kt−1 ⊕ Pt−1({\textperiodcentered} {\textperiodcentered} {\textperiodcentered} k1 ⊕ P1(k0 ⊕ x) {\textperiodcentered} {\textperiodcentered} {\textperiodcentered})). The indistinguishability of E k from a truly random permutation by an adversary who also has oracle access to the (public) random permutations P1, . . . , Pt was investigated in 1997 by Even and Mansour for t = 1 and for higher values of t in a series of recent papers. For t = 1, Even and Mansour proved indistinguishability security up to 2 n/2 queries, which is tight. Much later Bogdanov et al. (2011) conjectured that security should be 2 t t+1 n queries for general t, which matches an easy distinguishing attack (so security cannot be more). A number of partial results have been obtained supporting this conjecture, besides Even and Mansour's original result for t = 1: Bogdanov et al. proved security of 2 2 3 n for t ≥ 2, Steinberger (2012) proved security of 2 3 4 n for t ≥ 3, and Lampe, Patarin and Seurin (2012) proved security of 2 t t+2 n for all even values of t, thus " barely " falling short of the desired 2 t t+1 n . Our contribution in this work is to prove the long-sought-for secu-rity bound of 2 t t+1 n , up to a constant multiplicative factor depending on t. Our method is essentially an application of Patarin's H-coefficient technique.},
+	archivePrefix = {arXiv},
+	arxivId = {arXiv:1805.09461v3},
+	author = {Chen, Shan and Steinberger, John},
+
+	file = {:home/lms/Documents/论文/强化学习/2018-12-30Deep Reinforcement Learning for
+	Sequence-to-Sequence Models.pdf:pdf},
+
+	journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+	title = {{Deep Reinforcement Learning for Sequence-to-Sequence Models}},
+	year = {2014}
+}
+
+@article{matthews2002,
+	author = {Matthews, I., Cootes, T.F., Bangham, J.A., Cox, S., Harvey, R.},
+	file = {:home/lms/Downloads/AVICAR$\backslash$:Extraction of visual features for lipreading.pdf:pdf},
+	title = {{Extraction of visual features for lipreading}},
+	year = {2002},
+	journal={ACM DL}
+}
+
+@article{Lee2004,
+	author = {Lee, Bowon and Hasegawa-johnson, Mark and Goudeseune, Camille and Kamdar, Suketu and Borys, Sarah and Liu, Ming and Huang, Thomas},
+	file = {:home/lms/Downloads/AVICAR$\backslash$: Audio-Visual Speech Corpus in a Car Environment.pdf:pdf},
+	title = {{ISCA Archive AVICAR: Audio-Visual Speech Corpus in a Car Environment}},
+	year = {2004},
+	journal={Interspeech}
+}
+
+@article{Patterson2011,
+	abstract = {Multimodal signal processing has become an important topic of research for overcoming certain problems of audio-only speech processing. Audio-visual speech recognition is one area with great potential. Difficulties due to background noise and multiple speakers are significantly reduced by the additional information provided by extra visual features. Despite a few efforts to create databases in this area, none has emerged as a standard for comparison for several possible reasons. This paper seeks to introduce a new audiovisual database that is flexible and fairly comprehensive, yet easily available to researchers on one DVD. The CUAVE database is a speaker-independent corpus of over 7,000 utterances of both connected and isolated digits. It is designed to meet several goals that are discussed in this paper. The most notable are availability of the database, flexibility for use of the audio-visual data, and realistic considerations in the recordings (such as speaker movement). Another important focus of the database is the inclusion of pairs of simultaneous speakers, the first documented database of this kind. The overall goal of this project is to facilitate more widespread audio-visual research through an easily available database. For information on obtaining CUAVE, please visit our webpage (http://ece.clemson.edu/speech).},
+	author = {Patterson, E.K. and Gurbuz, S. and Tufekci, Z. and Gowdy, J.N.},
+	file = {:home/lms/Downloads/CUAVE$\backslash$: A NEW AUDIO-VISUAL DATABASE FOR MULTIMODAL HUMAN-COMPUTER INTERFACE RESEARCH .pdf:pdf},
+	journal = {ICASSP},
+
+	title = {{CUAVE: A new audio-visual database for multimodal human-computer interface research}},
+	year = {2011}
+}
+
+@article{Zhao2009,
+	author = {Zhao, Guoying and Barnard, Mark and Pietik{\"{a}}inen, Matti},
+	file = {:home/lms/Downloads/Lipreading With Local Spatiotemporal Descriptors.pdf:pdf},
+	journal = {IEEE Transactions on Multimedia},
+	keywords = {Lipreading,Local binary patterns,Spatiotemporal descriptors,Visual speech recognition},
+	title = {{Lipreading with local spatiotemporal descriptors}},
+	year = {2009}
+}
+
+@article{Zhao2015,
+	abstract = {oulu vs2.},
+	author = {Iryna Anina, Ziheng Zhou, Guoying Zhao and Matti Pietik¨ainen},
+
+	file = {:home/lms/Downloads/Lipreading With Local Spatiotemporal Descriptors.pdf:pdf},
+
+	journal = {IEEE FG},
+	keywords = {OuluVS2: a multi-view audiovisual database for non-rigid mouth motion analysis},
+	title = {{OuluVS2: a multi-view audiovisual database for non-rigid mouth motion analysis}},
+	year = {2015}
+}
+
+@article{cooke2006,
+	author = {Cooke, M., Barker, J., Cunningham, S., Shao, X},
+
+	file = {:home/lms/Downloads/An audio-visual corpus for speech perception and automatic speech recognition.pdf:pdf},
+
+	keywords = {Lipreading,Local binary patterns,Spatiotemporal descriptors,Visual speech recognition},
+
+	title = {{An audio-visual corpus for speech perception and automatic speech recognition.}},
+	year = {2006}
+}
+
+@article{Kanai2017,
+	abstract = {A gated recurrent unit (GRU) is a successful recurrent neural network architecture for time-series data. The GRU is typically trained using a gradient-based method, which is subject to the exploding gradient problem in which the gradient increases significantly. This problem is caused by an abrupt change in the dynamics of the GRU due to a small variation in the parameters. In this paper, we find a condition under which the dynamics of the GRU changes drastically and propose a learning method to address the exploding gradient problem. Our method constrains the dynamics of the GRU so that it does not drastically change. We evaluated our method in experiments on language modeling and polyphonic music modeling. Our experiments showed that our method can prevent the exploding gradient problem and improve modeling accuracy.},
+	author = {Kanai, Sekitoshi and Fujiwara, Yasuhiro and Iwamura, Sotetsu},
+	file = {:home/lms/Documents/论文/Preventing Gradient Explosionsin Gated Recurrent Units.pdf:pdf},
+	journal = {Neural Information Processing Systems},
+	keywords = {Gated Recurrent Units},
+	title = {{Preventing Gradient Explosions in Gated Recurrent Units}},
+	year = {2017},
+	journal={NIPS}
+}
+
+
